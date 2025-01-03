@@ -1,0 +1,5 @@
+import openai
+
+openai.api_key = "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"
+completion = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=[{"role": "user", "content": "Write an essay about penguins "}])
+print(completion.choices[0].message.content)
